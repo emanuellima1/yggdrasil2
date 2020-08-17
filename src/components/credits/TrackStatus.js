@@ -17,7 +17,7 @@ const TrackStatus = ({ doneClasses, customBoxClasses }) => {
 
   return (
     <React.Fragment>
-      <div className="flex items-center mb2 fw5">
+      {/* <div className="flex items-center mb2 fw5">
         <FontAwesomeIcon
           icon={faCheckCircle}
           className={`${validSistemas ? 'green' : 'white'} f4 mr2`}
@@ -52,7 +52,7 @@ const TrackStatus = ({ doneClasses, customBoxClasses }) => {
         <span className={validTeoria ? 'near-black' : 'moon-gray'}>
           Teoria da Computação
         </span>
-      </div>
+      </div> */}
     </React.Fragment>
   )
 }

@@ -2,63 +2,81 @@ import { BoxTypes } from '../definitions/constants'
 import { validateBox } from '../definitions/validation'
 
 export default {
-  description:
-    'O aluno deverá completar o número de disciplinas necessário por bloco (indicado abaixo) + 2 disciplinas quaisquer dentro de qualquer um dos módulos.',
   boxes: {
     left: [
       {
-        title: 'Desenvolvimento de Software',
-        classes: ['MAC0218',
-                  'MAC0332',
-                  'MAC0346',
-                  'MAC0413',
-                  'MAC0467',
-                  'MAC0470', 
-                  'MAC0472',
-                  'MAC0475',
-                ],
-        type: BoxTypes.COMPLETE_SOME,
-        minimum: 2,
+        title: 'Optativas Regulares',
+        classes: [
+          '4300206',
+          '4300218',
+          '4300223',
+          '4300318',
+          '4300225',
+          '4300227',
+          '4300228',
+          '4300410',
+          '4300323',
+          '4300324',
+          '4300325',
+          '4300337',
+          '4300345',
+          '4300429',
+          '4302307',
+          '4300320',
+          '4300327',
+          '4300360',
+          '4300430',
+          '4300436',
+          '4302306',
+          '4302314',
+          '4302322',
+          '4302360',
+          '4302504',
+          '4300315',
+          '4300326',
+          '4300331',
+          '4300406',
+          '4300407',
+          '4300409',
+          '4300427',
+          '4300437',
+          '4300502',
+          '4302304',
+          '4302308',
+          '4302404',
+          '4300402',
+          '4300412',
+          '4300422',
+          '4300438'
+        ],
+        type: BoxTypes.FREE,
       },
     ],
     right: [
       {
-        title: 'Sistemas Paralelos e Distribuídos',
+        title: 'Optativas Avançadas',
         classes: [
-          'MAC0219',
-          'MAC0344',
-          'MAC0352',
-          'MAC0463',
+          '4305005',
+          '4305103',
+          '4305326',
+          '4305001',
+          '4305003',
+          '4305106',
+          '4305107',
+          '4305205',
+          '4305292',
+          '4305300',
+          '4305343',
+          '4305002',
+          '4305004',
+          '4305006',
+          '4305110',
+          '4305276',
+          '4305299',
+          '4305828'
         ],
-        type: BoxTypes.COMPLETE_SOME,
-        minimum: 2,
-      },
-      {
-        title: 'Bancos de Dados',
-        classes: ['MAC0426',
-                  'MAC0439',
-                  'MAC0459',
-                 ],
-        type: BoxTypes.COMPLETE_SOME,
-        minimum: 1,
+        type: BoxTypes.FREE,
       },
     ],
-  },
-  validate: (boxes, doneClasses) => {
-    const trackClasses = [...boxes.left, ...boxes.right].reduce(
-      (acc, cur) => [...acc, ...cur.classes],
-      []
-    )
-    const completedTrackClasses = trackClasses.reduce(
-      (acc, cur) => (doneClasses.includes(cur) ? acc + 1 : acc),
-      0
-    )
-    const basicModules = [boxes.left[0], boxes.right[0], boxes.right[1]]
-    const completedBasicModules = basicModules.reduce(
-      (acc, cur) => (validateBox(cur, doneClasses) ? acc + 1 : acc),
-      0
-    )
-
-    return completedTrackClasses >= 7 && completedBasicModules == 3
   },
 }

@@ -9,9 +9,9 @@ const Header = () => {
         style={{ height: '3rem' }}
       />
       <div>
-        <span className="f2 b dark-blue">yggdrasil</span>
-        <span className="f2 b blue ml1 relative" style={{ top: '0.5rem' }}>
-          2
+        <span className="f1 b dark-blue">Valhala</span>
+        <span className="f3 b blue ml1 relative" style={{ top: '1rem' }}>
+          IFUSP
         </span>
       </div>
     </header>

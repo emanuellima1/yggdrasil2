@@ -13,28 +13,28 @@ const SpecialOptatives = ({ statisticsOptative, scienceOptative, color }) => {
           icon={faCheckCircle}
           className={`${statisticsOptative ? checkColor : 'white'} f4 mr2`}
         />
-        <div className="flex flex-column">
+        {/* <div className="flex flex-column">
           <span className={statisticsOptative ? 'near-black' : 'moon-gray'}>
             Optativa de Estatística
           </span>
           {statisticsOptative && (
             <span className={`f6 ${checkColor} fw6`}>{statisticsOptative}</span>
           )}
-        </div>
+        </div> */}
       </div>
       <div className="flex items-center fw5">
         <FontAwesomeIcon
           icon={faCheckCircle}
           className={`${scienceOptative ? checkColor : 'white'} f4 mr2`}
         />
-        <div className="flex flex-column">
+        {/* <div className="flex flex-column">
           <span className={scienceOptative ? 'near-black' : 'moon-gray'}>
             Optativa de Ciências
           </span>
           {scienceOptative && (
             <span className={`f6 ${checkColor} fw6`}>{scienceOptative}</span>
           )}
-        </div>
+        </div> */}
       </div>
     </React.Fragment>
   )
